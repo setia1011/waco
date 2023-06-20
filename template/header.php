@@ -1,3 +1,5 @@
+<?php include("authx.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +31,7 @@
     <div id="headerx" class="container is-fluid" style="border-bottom: 2px solid #8080802b;">
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a class="logox navbar-item has-background-warning" href="http://waco.it/">
+                <a class="logox navbar-item has-background-white-ter" href="http://waco.it/">
                     <img src="assets/whatsapp.svg" width="28" height="28">
                 </a>
 
@@ -43,14 +45,20 @@
             <div id="navbarBasicExample" class="navbar-menu">
                 <div class="navbar-start">
                     <a class="navbar-item">
-                        Documentation
+                        <i class="fa-regular fa-book"></i> &nbsp; Documentation
+                    </a>
+                    <a class="navbar-item">
+                        <i class="fa-sharp fa-solid fa-book-blank has-text-success-dark"></i> &nbsp; API
                     </a>
                 </div>
                 <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="button is-danger is-small">
+                        <a class="button is-success is-small">
                             Hi <?= $name = isset($_SESSION['user']['name']) ? $_SESSION['user']['name'] : ""; ?>
+                        </a>
+                        <a href="authx.php?do=exit" class="button is-danger is-small">
+                            <strong><i class="fa-solid fa-right-from-bracket"></i></strong>
                         </a>
                     </div>
                 </div>

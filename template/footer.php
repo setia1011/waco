@@ -35,7 +35,7 @@
 
             socket.on('init', function(data) {
 				$('.client-container .client').not(':first').remove();
-				console.log(data);
+				// console.log(data);
 				for (var i = 0; i < data.length; i++) {
 					var session = data[i];
 
@@ -62,7 +62,18 @@
 			});
 
 			socket.on('message', function(data) {
+				var seen = [];
 				$(`.client.client-${data.id} .logs`).prepend($('<li>').text(data.text));
+				$(`.client.client-${data.id} .logs`).children().each((i, e) => {
+					seen.push(data.text);
+				});
+				uniq = [...new Set(seen)];
+				
+				uniq.forEach((e) => {
+					console.log(e);
+					// $(`.client.client-${data.id}`).remove();
+					$(`.client.client-${data.id} .logs`).html($('<li>').text(e));
+				})
 			});
 
 			socket.on('qr', function(data) {

@@ -24,7 +24,6 @@ include("template/header.php"); ?>
 				<div class="control">
 					<input class="input is-success" type="text" id="client-id">
 				</div>
-				<p class="help is-success">This username is available</p>
 			</div>
 
 			<div class="field">
@@ -40,28 +39,30 @@ include("template/header.php"); ?>
 				</div>
 			</div>
 		</div>
-		<div class="column is-full-mobile is-half-tablet is-half-desktop is-half-widescreen is-half-fullhd">
+		<div class="column">
 			<div class="field">
-				<label class="label"><i class="fa-solid fa-users-viewfinder"></i></label>
+				<label class="label">...</label>
 			</div>
 			<!-- Clients -->
 			<div class="client-container">
 				<div class="client hide">
 					<div class="card mb-2">
 						<div class="card-content">
-							<img src="" alt="QR Code" id="qrcode" class="image" style="border: 1px solid hsl(0deg, 0%, 71%);">
-							<p class="logs"></p>
+							#<span class="title is-size-5"></span>
+							<hr>
+							<img src="" alt="QR Code" class="qrcode" style="border: 1px solid hsl(0deg, 0%, 71%);">
+							<img src="" alt="Pic" class="pic" style="border: 1px solid hsl(0deg, 0%, 71%); width: 278px; padding: 5px;">
 						</div>
 						<footer class="card-footer">
 							<p class="card-footer-item is-block">
-								<span class="has-text-weight-bold">#<span class="title is-size-5"></span></span>
+								<span class="logs"></span>
 								<!-- <span class="description"></span> -->
 							</p>
-							<p class="card-footer-item is-block">
-							<span class="button is-small is-danger is-outlined is-pulled-right">
+							<!-- <p class="card-footer-item is-block">
+							<span class="button exit is-small is-danger is-outlined is-pulled-right" title="">
 								<i class="fa-solid fa-arrow-right-from-bracket"></i>
 							</span>
-							</p>
+							</p> -->
 						</footer>
 					</div>
 
